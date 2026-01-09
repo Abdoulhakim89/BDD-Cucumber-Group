@@ -27,6 +27,7 @@ public class CheckoutStepDef {
     public void customer_proceeds_to_checkout(String fname, String lname, String address, String city, String zip, String email) {
        checkoutPage.fillOrderForm(fname, lname, address, city, zip, email);
        checkoutPage.placeOrder();
+       ///uhjghiujkhnoljohhnijhbui
     }
 
     @Then("Order is placed successfully")
