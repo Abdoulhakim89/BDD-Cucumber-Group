@@ -12,9 +12,15 @@ public class HomePage {
     public void linkClicker(String link){
         driver.findElement(By.linkText(link)).click();
     }
+
     public AccountsPage clickAccountsPageLink(){
         linkClicker("Account");
         return new AccountsPage(driver);
     }
+    public ProductsPage clickProductsPageLink(){
+        linkClicker("Store");
+        return new ProductsPage(driver);
+    }
+
 
 }
