@@ -3,7 +3,7 @@ Feature: Checkout Page Functionality
     As a registered customer
     I want to be able to access the checkout page Successfully
 
-  Scenario Outline: Access Checkout Page
+  Scenario Outline: Checkout Page order successfully
     Given Customer has added items to the cart
     When Customer proceeds to checkout and fill in <firstName> and <lastName> and <address> and <city> and <postcode> and <email> properly
     Then Order is placed successfully

@@ -31,6 +31,7 @@ public class AddToCartStep {
 
     @Then("the product should be added to the cart")
     public void the_product_should_be_added_to_the_cart() {
+        System.out.println(storePage.clickAddToCart());
         assertEquals(storePage.clickAddToCart(),"View cart", "product is not added to cart");
 
     }

@@ -4,7 +4,6 @@ import baseUtil.BaseUtil;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebDriver;
 import pages.AccountsPage;
 import static org.testng.Assert.*;
 
@@ -22,7 +21,7 @@ public class RegisterStepDefs {
     }
 
     @When("I enter valid {string} {string} and {string}")
-    public void i_enter_valid_username_email_and_password(String username, String email, String password)throws InterruptedException {
+    public void i_enter_valid_username_email_and_password(String username, String email, String password) {
        account.fillRegForm(username,email,password);
        account.submitRegForm();
     }

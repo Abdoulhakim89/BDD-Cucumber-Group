@@ -17,10 +17,10 @@ public class BaseUtil {
         driver.get("https://askomdch.com");
         home = new HomePage(driver);
     }
-    @After
-    public void quit(){
-        driver.quit();
-    }
+//    @After
+//    public void quit(){
+//        driver.quit();
+//    }
 
 
 }
