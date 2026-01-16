@@ -15,17 +15,17 @@ public class SearchStepDefs {
         this.utils = utils;
     }
 
-    @Given("I am on the Store page")
+    @Given("the customer is on the Store page")
     public void i_am_on_the_store_page() {
         products = utils.home.clickProductsPageLink();
     }
 
-    @When("I search for {string}")
-    public void i_search_for(String product) {
+    @When("customer searches for {string}")
+    public void customerSearchFor(String product) {
         products.queryAndSearch(product);
     }
 
-    @Then("I should see products that only relate to {string}")
+    @Then("customer should see products that only relate to {string}")
     public void i_should_see_products_that_only_relate_to_search_product(String product) {
         assertEquals(products.matchedSearchResults(product),"Matching",products.matchedSearchResults(product));
     }

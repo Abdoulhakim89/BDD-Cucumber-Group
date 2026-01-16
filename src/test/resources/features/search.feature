@@ -1,12 +1,16 @@
+@searchFromStorePage
+
 Feature: Searching from Store page
   As a customer
   I want to search a product from the store page
   So that I can easily find products to buy
 
+  Background: Customer is on the store page
+    Given the customer is on the Store page
+
   Scenario Outline: Searching existing products
-    Given I am on the Store page
-    When I search for <product>
-    Then I should see products that only relate to <product>
+    When customer searches for <product>
+    Then customer should see products that only relate to <product>
 
     Examples:
     |product|
@@ -14,7 +18,6 @@ Feature: Searching from Store page
     |"shirt"|
 
     Scenario Outline: Searching non existent product
-      Given I am on the Store page
       When I search for non existent product <product>
       Then I should see a product not found message for <product>
       Examples:

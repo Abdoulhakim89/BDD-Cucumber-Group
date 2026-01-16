@@ -12,13 +12,14 @@ import org.testng.annotations.DataProvider;
                 "html:target/cucumber-reports.html",
                 "json:target/cucumber.json"
 
-        }
+        },
+        tags = "@searchFromStorePage"
 )
 
 public class RunnerTest extends AbstractTestNGCucumberTests {
-//    @DataProvider(parallel = true)
-//    @Override
-//    public Object[][] scenarios(){
-//        return super.scenarios();
-//    }
+    @DataProvider(parallel = true)
+    @Override
+    public Object[][] scenarios(){
+        return super.scenarios();
+    }
 }
